@@ -1,0 +1,46 @@
+<%= stylesheet_link_tag "homescreen", media: "all" %>
+<div class ="diagonal"></div>
+<div class="content">
+  <div class="main">
+    <p class="logo">XOXO
+      <p>
+        <% if current_user %>
+          <div class="stats">
+            <div class="leftSide">
+              <div class ="logo">
+              </div>
+              <h2> Menu </h2>
+              <ul>
+                <li class="black"><%= link_to "Join Open Rooms", open_rooms_path %></li>
+                <li class="black"><%= link_to "Show Active Rooms ", active_rooms_path %></li>
+                <li><%= link_to "Edit Account", edit_user_path %></li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete  %></li>
+                <li>
+                </ul>
+              </div>
+              <div class="rightSide">
+                <ul>
+                  <li>
+                    <h2>Your Data</h2>
+                  </li>
+                  <li> User: <%= current_user.name %></li>
+                  <li>  Balance: <%=  current_user.balance %> </li>
+                  <li>  Winrate by Game: 0% </li>
+                  <li>  Games won: <%=  (current_user.game_wins) %> </li>
+                  <li>  Winrate by Round: 0% </li>
+                  <li>  Total Rounds won: <%=  current_user.round_wins  %>% </li>
+                </ul>
+              </div>
+            </div>
+          <% else %>
+            <h1> XOXO</h1>
+            <h2> Choose Wisely </h2>
+            <div class="login_wrapper">
+              <%= link_to "Log in", new_user_session_path %>
+            </div>
+            <div class="signup_wrapper">
+              <%= link_to "Sign up", new_user_registration_path %>
+            </div>
+          <% end %>
+        </div>
+      </div>

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room: one
+  round_number: 9.99
+  finished: false
+  creation_date: 2023-01-30
+
+two:
+  room: two
+  round_number: 9.99
+  finished: false
+  creation_date: 2023-01-30

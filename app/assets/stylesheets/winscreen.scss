@@ -1,0 +1,89 @@
+@import "style";
+
+
+body{
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #27608F;
+}
+.skew{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FF6A19;
+    transform: skew(-20deg);
+    z-index: 1;
+    left: -50%;
+}
+#round{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1650px;
+    padding-bottom: 200px;
+    height: 100vh;
+    margin: auto;
+   z-index: 2;
+   position: relative;
+
+   .decisions{
+    height: 85%;
+    align-self: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+   }
+   .round-container{
+        color: $white;
+
+        h1{
+            margin: 0;
+            color: $white;
+            font-size: 64px;
+        }
+   }
+   a{
+    &:hover{
+        text-decoration: none;
+    }
+   }
+
+   #timer{
+    font-size: 96px;
+    font-weight: 600;
+   }
+
+   .x{
+        color: #27608F;
+        font-size: 500px;
+        font-weight: 600;
+
+   }
+
+   .o{
+    color: #FF6A19;
+        font-size: 500px;
+        font-weight: 600;
+
+   }
+
+   .footer{
+    width: 100%;
+    align-self: center;
+    justify-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    font-size: 64px;
+    font-weight: 600;
+    color: $white;
+    span{
+        padding-inline: 50px;
+    }
+   }
+
+}
+

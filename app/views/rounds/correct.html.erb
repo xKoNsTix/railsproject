@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag "correctscreen", media: "all" %>
+<div class="skew"></div>
+<section id="round">
+<nav>
+<span class="logo">XOXO</span>
+<%= link_to  root_path do %> 
+<%= image_tag 'menu_white.svg' %>
+<% end %>
+</nav>
+
+<div class="decisions">
+
+<div class="round-container">
+<h1>True</h1>
+ <%= link_to "next round", rounds_path(Round.where(room_id: @round.room_id).order(:created_at).last) %>
+</div>
+</div>
+</section>
+
+

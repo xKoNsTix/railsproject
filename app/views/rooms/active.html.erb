@@ -1,0 +1,93 @@
+<script>
+  var countDownDate = new Date().getTime();
+  var d = new Date();
+   countDownDate += (75 - d.getSeconds()) * 1000;
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+   // Get today's date and time
+   var now = new Date().getTime();
+
+   // Find the distance between now and the count down date
+   var distance = countDownDate - now;
+
+   // Time calculations for days, hours, minutes and seconds
+   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+   // Display the result in the element with id="demo"
+   const timers = document.querySelectorAll('#timer')
+     timers.forEach((timer) => {
+       timer.innerHTML = minutes + "m " + seconds + "s ";
+     })
+   // If the count down is finished, write some text
+   if (distance < 0) {
+     location.reload()
+   }
+  }, 1000);
+</script>
+<%= stylesheet_link_tag "activeroomscreen", media: "all" %>
+<section id="activerooms">
+  <nav>
+    <span class="logo">XOXO</span>
+    <%= link_to  root_path do %>
+      <%= image_tag 'menu.svg', alt: 'Menu icon' %>
+    <% end %>
+  </nav>
+  <div class="header">
+    <h1>Active Rooms - Rooms activate in:  <span id="timer">  &nbsp;</span> </h1>
+  </div>
+  <div class="rooms-container">
+    <% @rooms.each do |room|
+    round = Round.where(room_id: room.id).order(:created_at).last
+  %>
+    <% if round %>
+      <% if(@rounduser.where(round_id: round.id).first.x_decision == nil)  %>
+        <%= link_to rounds_path(round) do %>
+          <div class="room blue">
+            <div class="orange skew"></div>
+            <span class="x">X</span>
+            <div class="title-container">
+              <h2 class="room-title">
+                CHOOSE <br>
+                <span id="timer">  &nbsp;</span>
+              </h2>
+              <p>Remaining player: <%= RoomUser.where(room_id: room.id ,alive: true).count %> </p>
+            </div>
+            <span class="o">O</span>
+          </div>
+        <% end %>
+      <% elsif (@rounduser.where(round_id: round.id).first.x_decision == true) %>
+        <%= link_to rounds_x_path(round) do %>
+          <div class="room blue">
+            <div class="orange skew right"></div>
+            <span class="x">X</span>
+            <div class="title-container">
+              <h2 class="room-title">
+                <span id="timer">  &nbsp;</span>
+              </h2>
+              <p>Remaining player: <%= RoomUser.where(room_id: room.id ,alive: true).count %> </p>
+            </div>
+          </div>
+        <% end %>
+      <% elsif (@rounduser.where(round_id: round.id).first.x_decision == false) %>
+        <%= link_to rounds_o_path(round) do %>
+          <div class="room blue">
+            <div class="orange skew left"></div>
+            <div class="title-container">
+              <h2 class="room-title">
+                <span id="timer">  &nbsp;</span>
+              </h2>
+              <p>Remaining player: <%= RoomUser.where(room_id: room.id ,alive: true).count %> </p>
+            </div>
+            <span class="o">O</span>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+</section>
+

@@ -1,0 +1,37 @@
+<%= stylesheet_link_tag "loginscreens", media: "all" %>
+<div class ="logo">
+<p>XOXO<p>
+</div>
+
+<div class="container">
+<div class="wrapper">
+<h2>Login</h2>
+<div class="forms">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+
+ <br>
+ <br>
+
+
+<div class ="actionswrapper">
+  <div class="actions">
+    <%= f.submit "Submit" %>
+    </div>
+  </div>
+ </div>
+<% end %>
+</div>
+</div>
+<div class="signup">
+<%= render "devise/shared/links" %>
+</div>

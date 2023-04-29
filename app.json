@@ -1,0 +1,8 @@
+{
+    "cron": [
+      {
+        "command": "rake room:create_round",
+        "schedule": "* * * * *"
+      }
+    ]
+  }

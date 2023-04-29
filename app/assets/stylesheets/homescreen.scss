@@ -1,0 +1,303 @@
+/** @format */
+@import "style";
+
+
+
+
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+
+    .main {
+      top: 0;
+      .logo {
+        display: absolute;
+        color: $white;
+        font-size: 48px;
+        top: -2%;
+        left: 2%;
+        line-height: 48px;
+        margin: 0 0 0 13px;
+        padding: 0;
+        z-index: 999;
+      }
+
+      position: relative;
+      z-index: 100;
+      p {
+        z-index: 100;
+        color: $white;
+      }
+      align-items: center;
+    }
+    h1 {
+      font-size: 128px;
+      font-weight: 600;
+      color: $white;
+      text-align: center;
+      z-index: 99;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      line-height: 128px;
+    }
+
+    h2 {
+      font-size: 64px;
+      font-weight: 400;
+      color: $white;
+      text-align: center;
+      z-index: 99;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      line-height: 64px;
+    }
+
+    .login_wrapper {
+      text-decoration: none !important;
+      position: relative;
+      z-index: 99;
+      margin-left: 10%;
+      margin-top: 20vh;
+      a {
+        font-size: 128px;
+        color: $white;
+      }
+    }
+    .signup_wrapper {
+      text-decoration: none !important;
+      position: relative;
+      z-index: 99;
+      margin: 0;
+      margin-right: 10%;
+      margin-bottom: 5vh;
+
+      text-align: right;
+      a {
+        font-size: 128px;
+        color: $black;
+      }
+    }
+    .stats {
+      display: flex;
+      width: 80%;
+      margin: auto;
+      margin-top: 5%;
+
+      .leftSide {
+        h2 {
+          transform: skew(40deg);
+          margin-bottom: 10px;
+          text-align: right;
+
+          font-size: 48px;
+        }
+        width: 50%;
+        transform: skew(-40deg);
+        margin-top: 10%;
+
+        li {
+          color: $white;
+          font-size: 32px;
+          text-decoration: none;
+          transform: skew(40deg);
+          text-align: right;
+          margin-bottom: 10px;
+        }
+      }
+
+      .rightSide {
+        margin-top: 10%;
+        padding-left: 30%;
+        width: 50%;
+        transform: skew(-40deg);
+        h2 {
+          margin-bottom: 10px;
+          text-align: left;
+          margin-right: 5%;
+          color: $black;
+          font-size: 48px;
+        }
+        li {
+          margin-left: 10%;
+          color: $white;
+          font-size: 32px;
+          text-decoration: none;
+          color: $black;
+          transform: skew(40deg);
+        }
+      }
+    }
+  }
+}
+
+// --------MOBILE--------
+@media(max-width:768px){
+
+body {
+  .diagonal {
+
+    width: 450%;
+
+    height: 120%;
+    transform: skew(+70deg);
+    background: $black;
+
+    left: 40%;
+    top:35%;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+
+  // @media (min-width: 768px) {
+  //   width: 100%;
+  //   height: 100%;
+  //   transform: skew(-40deg);
+  //   background: $black;
+  //   position: absolute;
+  //   left: -45%;
+
+  //   z-index: 1;
+  //   overflow: hidden;
+  //   top: 0;
+  // }
+
+
+
+
+
+
+  }
+  height: auto;
+  overflow: auto;
+  .diagonal {
+    overflow: hidden;
+  }
+}
+.main {
+  top: 0;
+  .logo {
+    display: absolute;
+    color: $black;
+    font-size: 48px;
+    top: -2%;
+    left: 2%;
+    line-height: 48px;
+    margin: 0 0 0 13px;
+    padding: 0;
+    z-index: 999;
+  }
+
+  position: relative;
+  z-index: 100;
+  p {
+    z-index: 100;
+    color: $white;
+  }
+  align-items: center;
+}
+h1 {
+  font-size: 96px;
+  font-weight: 600;
+  color: $white;
+  text-align: center;
+  z-index: 99;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 128px;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 400;
+  color: $white;
+  text-align: center;
+  z-index: 99;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 64px;
+}
+
+.login_wrapper {
+  text-decoration: none !important;
+  position: relative;
+  z-index: 99;
+  margin-left: 40%;
+  margin-top: 12vh;
+  a {
+    font-size: 64px;
+    color: $white;
+  }
+}
+.signup_wrapper {
+  text-decoration: none !important;
+  position: relative;
+  z-index: 99;
+  margin: 0;
+  margin-right: 30%;
+  margin-top: 25vh;
+
+  text-align: right;
+  a {
+    font-size: 64px;
+    color: $black;
+  }
+}
+.stats {
+
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+
+  .leftSide {
+    width: 100%;
+
+    h2 {
+
+      margin-bottom: 10px;
+      text-align: right;
+
+      font-size: 48px;
+    }
+
+
+
+
+    li {
+      color: $white;
+      font-size: 24px;
+      text-decoration: none;
+
+      text-align: right;
+      margin-bottom: 10px;
+    }
+  }
+
+  .rightSide {
+    margin-top: 60%;
+    margin-left: -5%;
+
+    width: 100%;
+
+    h2 {
+      margin-bottom: 10px;
+      text-align: left;
+      margin-right: 5%;
+      color: $black;
+      font-size: 24px;
+    }
+    li {
+      margin-left: 10%;
+      color: $white;
+      font-size: 24px;
+      text-decoration: none;
+      color: $black;
+
+    }
+  }
+}
+}

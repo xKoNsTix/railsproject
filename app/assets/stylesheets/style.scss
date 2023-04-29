@@ -1,0 +1,123 @@
+/** @format */
+
+$black: #373737;
+$white: #ffffff;
+
+// Import the other files
+//COLORS
+
+body {
+  background-color: #ffffff;
+}
+* {
+  font-family: "Rajdhani";
+  .notice .alert {
+    display: none !important;
+  }
+}
+
+h1{
+  color: $black;
+}
+
+.diagonal {
+
+    width: 450%;
+    width: 100vw;
+    height: 100%;
+    transform: skew(+60deg);
+    background: $black;
+    position: absolute;
+    left: 40%;
+    top:45%;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+    transform: skew(-40deg);
+    background: $black;
+    position: absolute;
+    left: -45%;
+
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+  }
+
+
+
+
+
+
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background-color: $white;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+
+  &:hover {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+li {
+  list-style-type: none;
+}
+
+.black {
+  color: $black;
+}
+
+.desktop-only {
+  @media (max-width: 768px){
+  display: none !important;
+}
+}
+
+//FONTS and Sizes
+
+// h1{
+//     font-size: 64px;
+
+// }
+
+// h2{
+//     font-size: 48;
+//     font-weight:600;
+// }
+
+@import "fonts";
+
+// GLOBAL
+
+// html,
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */

@@ -1,0 +1,31 @@
+<%= stylesheet_link_tag "openroomsscreen", media: "all" %>
+
+<section id="openrooms">
+  <nav>
+    <span class="logo">XOXO</span>
+    <%= link_to root_path do %>
+      <%= image_tag 'menu.svg', alt: 'Menu icon' %>
+    <% end %>
+  </nav>
+  <div class="header">
+    <h1>Open Rooms</h1>
+    <%= link_to "Create Room", create_rooms_path %>
+  </div>
+  <div class="rooms-container">
+    <% @rooms.each do |room| %>
+      <%= link_to join_rooms_path(room.id) do %>
+        <div class="room blue">
+          <div class="orange skew"></div>
+          <h2 class="room-title">Waiting for player</h2>
+          <div class="info">
+            <span class="player-info">Player: <%= RoomUser.where(room_id: room.id ,alive: true).count %></span>
+            <div class="money-info">
+              <span>Buy in: 100 €</span>
+              <span>Prize pool: <%= room.prizepool.truncate() %> €</span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</section>

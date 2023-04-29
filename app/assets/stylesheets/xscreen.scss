@@ -1,0 +1,141 @@
+@import "style";
+
+
+body{
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #27608F;
+}
+.skew{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FF6A19;
+    transform: skewY(-20deg);
+    z-index: 1;
+    top: -70%;
+
+    @media (min-width: 768px){
+        transform: skew(-20deg);
+        left: -70%;
+        top: unset;
+    }
+}
+#round{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1650px;
+    padding-bottom: 200px;
+    height: 100vh;
+    margin: auto;
+   z-index: 2;
+   position: relative;
+
+   nav{
+    width: 100%;
+    color: $white;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        padding-inline: 20px;
+        font-size: 48px;
+        font-weight: 600;
+    }
+    a{
+        padding-inline: 20px;
+    }
+    }
+
+   .decisions{
+    height: 85%;
+    align-self: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: 768px){
+        font-size: 500px;
+        flex-direction: row;
+     }
+   }
+   .round-container{
+        color: $white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            margin: 0;
+            color: $white;
+            font-size: 64px;
+        }
+   }
+   a{
+    &:hover{
+        text-decoration: none;
+    }
+   }
+
+   #timer{
+    font-size: 64px;
+    font-weight: 600;
+
+
+    @media (min-width: 768px){
+        font-size: 96px;
+     }
+   }
+
+   .x{
+        color: #27608F;
+        font-size: 200px;
+        font-weight: 600;
+
+        @media (min-width: 768px){
+            font-size: 500px;
+            line-height: 1rem;
+         }
+   }
+
+   .o{
+    color: #FF6A19;
+        font-size: 200px;
+        font-weight: 600;
+
+        @media (min-width: 768px){
+            font-size: 500px;
+            line-height: 1rem;
+         }
+
+   }
+
+   .footer{
+    width: 100%;
+    align-self: center;
+    justify-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    font-size: 64px;
+    font-weight: 600;
+    color: $white;
+    .info-span{
+        display: flex;
+        padding-inline: 20px;
+        @media (min-width: 768px){
+            padding-inline: 50px;
+         }
+         img{
+            margin-left: 10px;
+         }
+    }
+   }
+
+}
+

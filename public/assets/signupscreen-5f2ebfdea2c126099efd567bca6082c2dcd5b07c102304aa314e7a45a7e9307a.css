@@ -1,0 +1,394 @@
+/** @format */
+/** @format */
+/* line 9, app/assets/stylesheets/style.scss */
+body {
+  background-color: #ffffff;
+}
+
+/* line 12, app/assets/stylesheets/style.scss */
+* {
+  font-family: "Rajdhani";
+}
+
+/* line 14, app/assets/stylesheets/style.scss */
+* .notice .alert {
+  display: none !important;
+}
+
+/* line 19, app/assets/stylesheets/style.scss */
+.diagonal {
+  width: 600%;
+  height: 100vh;
+  transform: skewY(-160deg);
+  background: #373737;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+  margin-bottom: 70vh;
+}
+
+@media (min-width: 768px) {
+  /* line 19, app/assets/stylesheets/style.scss */
+  .diagonal {
+    width: 100%;
+    height: 100%;
+    transform: skew(-40deg);
+    background: #373737;
+    position: absolute;
+    left: -45%;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+  }
+}
+
+/* line 46, app/assets/stylesheets/style.scss */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+/* line 57, app/assets/stylesheets/style.scss */
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* line 61, app/assets/stylesheets/style.scss */
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* line 66, app/assets/stylesheets/style.scss */
+li {
+  list-style-type: none;
+}
+
+/* line 70, app/assets/stylesheets/style.scss */
+.black {
+  color: #373737;
+}
+
+/* rajdhani-300 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/assets/rajdhani-v15-latin-300-dacdeca77dbee66cc59d47218a70d86863b202c9941f273c60851c785955ae2d.eot);
+  /* IE9 Compat Modes */
+  src: url(/assets/rajdhani-v15-latin-300-dacdeca77dbee66cc59d47218a70d86863b202c9941f273c60851c785955ae2d.eot?#iefix) format("embedded-opentype"), url(/assets/rajdhani-v15-latin-300-26e56d9787dc18d865d2f3f970428230f82cddb208cfcd8e02a0296f615c9ef0.woff2) format("woff2"), url(/assets/rajdhani-v15-latin-300-604f0e6aa2c9a51f85cf0ab74754ef1f7e3b3960c31c995ff8eae570b3b605a9.woff) format("woff"), url(/assets/rajdhani-v15-latin-300-c7c091da098ed67102c7be47b739639d8e259a90565c046e6680e1a318440ce1.ttf) format("truetype"), url(/assets/rajdhani-v15-latin-300-96acea861b570da58f4b3fa5055b8bfc8c92d9905033b3dec73c0c62e4f0a5a5.svg#Rajdhani) format("svg");
+  /* Legacy iOS */
+}
+
+/* rajdhani-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/rajdhani-v15-latin-regular-9ca92021bd928e65f41de3e3f824077a67bc3d4cfa508375943461a226e3c168.eot);
+  /* IE9 Compat Modes */
+  src: url(/assets/rajdhani-v15-latin-regular-9ca92021bd928e65f41de3e3f824077a67bc3d4cfa508375943461a226e3c168.eot?#iefix) format("embedded-opentype"), url(/assets/rajdhani-v15-latin-regular-600c102f61d544c3c92bad3fce2a6f1787c9f1506f3e6b12ef681ed1d64fce99.woff2) format("woff2"), url(/assets/rajdhani-v15-latin-regular-dc671e3dde2bcca728320fd808cd41b1851c19778230d37683f852b62597f40b.woff) format("woff"), url(/assets/rajdhani-v15-latin-regular-c20bf0aec6d1dd415fed7e851f5eb47e8d979a0340582453f5c6a55248ee4ae9.ttf) format("truetype"), url(/assets/rajdhani-v15-latin-regular-59650c2ee058e145f5eec5981cc715f95824177aed2d5bd3950b6c2a87a3c7ca.svg#Rajdhani) format("svg");
+  /* Legacy iOS */
+}
+
+/* rajdhani-500 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/rajdhani-v15-latin-500-9969ff32c3ccbf19f32049256ff2d1ed02b9c33b2f681efc9ab4dc6288e9a2e5.eot);
+  /* IE9 Compat Modes */
+  src: url(/assets/rajdhani-v15-latin-500-9969ff32c3ccbf19f32049256ff2d1ed02b9c33b2f681efc9ab4dc6288e9a2e5.eot?#iefix) format("embedded-opentype"), url(/assets/rajdhani-v15-latin-500-9542e99493fe9712f0c0beab74872658668791bf50b7ace47dfb98d348d9ed1e.woff2) format("woff2"), url(/assets/rajdhani-v15-latin-500-dba8781f6c6031658097248a7cffb314892db892f247809c86af15e61b9ab2fc.woff) format("woff"), url(/assets/rajdhani-v15-latin-500-f2ed57fecc16384aa70182e315f2072604fb123373a2afec956d2467a03f7139.ttf) format("truetype"), url(/assets/rajdhani-v15-latin-500-5fda2a7a7b0454e4e5d1f466761140d514c3e18eca6be270dc67e50ea6371106.svg#Rajdhani) format("svg");
+  /* Legacy iOS */
+}
+
+/* rajdhani-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 600;
+  src: url(/assets/rajdhani-v15-latin-600-09ccf31fd20a66ecba09b3aab08bfb9d7e9be0104649c45c487121e202d759c2.eot);
+  /* IE9 Compat Modes */
+  src: url(/assets/rajdhani-v15-latin-600-09ccf31fd20a66ecba09b3aab08bfb9d7e9be0104649c45c487121e202d759c2.eot?#iefix) format("embedded-opentype"), url(/assets/rajdhani-v15-latin-600-04eb1e0bd800e63cd44e36a793cd90335b406346acae6bf28ea5e0c9fd53b67e.woff2) format("woff2"), url(/assets/rajdhani-v15-latin-600-a5a077de3eb874e66f9bccd70ad4b09457d135d2dc73abafb2de55c7016222ab.woff) format("woff"), url(/assets/rajdhani-v15-latin-600-6e5e1c37ac74b576bf1f455d20314406a1aedda5532c64e38f86cbf902dedc30.ttf) format("truetype"), url(/assets/rajdhani-v15-latin-600-f83f7ae8d938c49589fd1e2e2e249533fb44972425017df5b41351711cfc098f.svg#Rajdhani) format("svg");
+  /* Legacy iOS */
+}
+
+/* rajdhani-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/rajdhani-v15-latin-700-ede356e8ffb3d45aff1bef229370051e3a7bf4d49c61b60ec2ffa94eafd0eea9.eot);
+  /* IE9 Compat Modes */
+  src: url(/assets/rajdhani-v15-latin-700-ede356e8ffb3d45aff1bef229370051e3a7bf4d49c61b60ec2ffa94eafd0eea9.eot?#iefix) format("embedded-opentype"), url(/assets/rajdhani-v15-latin-700-9b53e081ddebac3a8b4a25e0f9e62845eaec2e466f4277b3d6d0ce7b05bd0bfb.woff2) format("woff2"), url(/assets/rajdhani-v15-latin-700-acfe50d6bf8f628c35eaa2b496ac8d735db83f54497046f53762ea236bad94b1.woff) format("woff"), url(/assets/rajdhani-v15-latin-700-3ad9619ad3824246e7323334370214c87a3141d05e7340b0dc16c652f5a3a6cd.ttf) format("truetype"), url(/assets/rajdhani-v15-latin-700-37f028ecb2b94d4d8965d5a9c5f4fe8b83d86aeaf3e08c305c291d2da1a1573a.svg#Rajdhani) format("svg");
+  /* Legacy iOS */
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@media (min-width: 768px) {
+  /* line 5, app/assets/stylesheets/signupscreen.scss */
+  body {
+    align-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  /* line 7, app/assets/stylesheets/signupscreen.scss */
+  body .logo p {
+    display: absolute;
+    font-size: 48px;
+    top: 0;
+    left: 2%;
+    line-height: 48px;
+    margin: 0 0 0 13px;
+    padding: 0;
+  }
+  /* line 23, app/assets/stylesheets/signupscreen.scss */
+  body .container {
+    margin: auto;
+    margin-top: 5vh;
+    width: 50%;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+  }
+  /* line 32, app/assets/stylesheets/signupscreen.scss */
+  body .container .wrapper {
+    align-items: center;
+    text-align: center;
+  }
+  /* line 33, app/assets/stylesheets/signupscreen.scss */
+  body .container .wrapper h2 {
+    color: #373737;
+    line-height: 96px;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 39, app/assets/stylesheets/signupscreen.scss */
+  body .container .wrapper .field {
+    text-align: left;
+    font-size: 24px;
+  }
+  /* line 45, app/assets/stylesheets/signupscreen.scss */
+  body .container .wrapper input {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #373737;
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    color: #373737;
+    font-size: 20px;
+    padding-left: 8px;
+  }
+  /* line 57, app/assets/stylesheets/signupscreen.scss */
+  body .container .wrapper label {
+    color: #373737;
+    text-align: left;
+    width: 100%;
+  }
+  /* line 62, app/assets/stylesheets/signupscreen.scss */
+  body .container .wrapper .forms {
+    text-align: left;
+  }
+  /* line 66, app/assets/stylesheets/signupscreen.scss */
+  body .container .actionswrapper {
+    align-items: left;
+    position: relative;
+  }
+  /* line 69, app/assets/stylesheets/signupscreen.scss */
+  body .container .actionswrapper .actions {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 87, app/assets/stylesheets/signupscreen.scss */
+  body h1 {
+    font-size: 96px;
+  }
+  /* line 91, app/assets/stylesheets/signupscreen.scss */
+  body h2 {
+    font-size: 96px;
+    color: white;
+    font-weight: 400;
+  }
+  /* line 97, app/assets/stylesheets/signupscreen.scss */
+  body a {
+    text-decoration: none;
+    color: #373737;
+  }
+  /* line 101, app/assets/stylesheets/signupscreen.scss */
+  body .login {
+    position: absolute;
+    top: 3px;
+    right: 6px;
+    font-size: 36px;
+  }
+}
+
+/* line 111, app/assets/stylesheets/signupscreen.scss */
+body {
+  align-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* line 113, app/assets/stylesheets/signupscreen.scss */
+body .logo p {
+  display: absolute;
+  font-size: 36px;
+  top: 1%;
+  left: 4%;
+  line-height: 48px;
+  margin: 0 0 0 13px;
+  padding: 0;
+}
+
+/* line 129, app/assets/stylesheets/signupscreen.scss */
+body .container {
+  margin: auto;
+  margin-top: 5vh;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+}
+
+/* line 139, app/assets/stylesheets/signupscreen.scss */
+body .container .wrapper {
+  align-items: center;
+  text-align: center;
+}
+
+/* line 140, app/assets/stylesheets/signupscreen.scss */
+body .container .wrapper h2 {
+  color: #373737;
+  line-height: 96px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 146, app/assets/stylesheets/signupscreen.scss */
+body .container .wrapper .field {
+  text-align: left;
+  font-size: 24px;
+}
+
+/* line 152, app/assets/stylesheets/signupscreen.scss */
+body .container .wrapper input {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #373737;
+  background-color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  color: #373737;
+  font-size: 20px;
+  padding-left: 8px;
+}
+
+/* line 164, app/assets/stylesheets/signupscreen.scss */
+body .container .wrapper label {
+  color: #373737;
+  text-align: left;
+  width: 100%;
+}
+
+/* line 169, app/assets/stylesheets/signupscreen.scss */
+body .container .wrapper .forms {
+  text-align: left;
+}
+
+/* line 173, app/assets/stylesheets/signupscreen.scss */
+body .container .actionswrapper {
+  align-items: left;
+  position: relative;
+}
+
+/* line 176, app/assets/stylesheets/signupscreen.scss */
+body .container .actionswrapper .actions {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 194, app/assets/stylesheets/signupscreen.scss */
+body h1 {
+  font-size: 96px;
+}
+
+/* line 198, app/assets/stylesheets/signupscreen.scss */
+body h2 {
+  font-size: 96px;
+  color: white;
+  font-weight: 400;
+}
+
+/* line 204, app/assets/stylesheets/signupscreen.scss */
+body a {
+  text-decoration: none;
+  color: #373737;
+}
+
+/* line 208, app/assets/stylesheets/signupscreen.scss */
+body .login {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  font-size: 36px;
+}
